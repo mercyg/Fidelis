@@ -2,7 +2,7 @@
   Total Alert Count 
 </div> 
 <div class="input">
-    Filters<input [(ngModel)]="searchText" placeholder="search">  <input [(ngModel)]="countryText" placeholder="searchCountry">
+    Filters<input [(ngModel)]="searchText" placeholder="search severity">  <input [(ngModel)]="countryText" placeholder="search Country">
   </div>
 <br>
 <div class="container">
@@ -51,7 +51,6 @@
 </div>
 <br>
 <div class="container">
-  
     <div>Client Country</div>
     <ul class="country">
         <li *ngFor="let country of uniqueCountry | filter: countryText">
@@ -63,5 +62,4 @@
               {{countryCount[country]}}
            </li>
       </ul>
- 
 </div>
