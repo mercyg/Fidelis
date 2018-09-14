@@ -1,37 +1,16 @@
-.severity-alert{
-   margin-top: 20px;
-}
-.severity-count{
-  margin-left: 500px;
-  margin-top: -85px;
-}
+
 ul{
     list-style: none;
+    width: 40%;
+    float: left;
+    
 }
 
-.client{
-    margin-top: 29px;
+.container{
+    margin-bottom: 120px;
+    border: 1px solid black;
 }
 
-.client-count{
-    margin-left: 500px;
-    margin-top: -110px;
-}
-
-.protocol{
-    margin-top: 20px;
-}
-
-.protocol-count{
-    margin-left: 500px;
-    margin-top: -110px;
-}
-
-.country{
-    margin-top: 20px;
-}
-
-.country-count{
-    margin-left: 500px;
-    margin-top: -110px;
+.input{
+    text-align: center;
 }

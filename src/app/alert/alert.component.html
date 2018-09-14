@@ -1,29 +1,30 @@
 <div style="text-align:center">
   Total Alert Count 
-  <p>filter</p>
-</div>
+</div> 
+<div class="input">
+    Filters<input [(ngModel)]="searchText" placeholder="search">  <input [(ngModel)]="countryText" placeholder="searchCountry">
+  </div>
 <br>
 <div class="container">
-  <div class="card">
-    <div class="card-header">Severity</div>
+    <div>Severity</div>
+    <div class="severity">
     <ul class="severity-alert">
-       <li *ngFor="let alert of uniqueSeverityData ">    
+       <li *ngFor="let alert of uniqueSeverityData | filter: searchText ">    
          {{alert}}
        </li> 
     </ul>
     <ul class="severity-count">
-        <li *ngFor="let count of objectKeys(alertCount).slice(1)">
+        <li *ngFor="let count of objectKeys(alertCount).slice(1) | filter: searchText">
             {{alertCount[count]}}
          </li>
     </ul>
-  </div>
+    </div>
 </div>
 <br>
 <div class="container">
-  <div class="card">
-    <div class="card-header">Client IP </div>
+    <div>Client IP </div>
     <ul class='client'>
-      <li  *ngFor="let clientip of uniqueClientIp">
+      <li  *ngFor="let clientip of uniqueClientIp ">
         {{clientip}}
       </li>
     </ul>
@@ -32,12 +33,10 @@
             {{clientIpCount[ipcount]}}
          </li>
     </ul>
-  </div>
 </div>
 <br>
 <div class="container">
-  <div class="card">
-    <div class="card-header">Protocol</div>
+    <div>Protocol</div>
     <ul class="protocol">
         <li *ngFor="let protocol of uniqueprotocol">
           {{protocol}}
@@ -48,21 +47,21 @@
               {{protocolCount[protocolC]}}
            </li>
       </ul>
-  </div>
+  
 </div>
 <br>
 <div class="container">
-  <div class="card">
-    <div class="card-header">Client Country</div>
+  
+    <div>Client Country</div>
     <ul class="country">
-        <li *ngFor="let country of uniqueCountry">
+        <li *ngFor="let country of uniqueCountry | filter: countryText">
           {{country}}
         </li>
       </ul>
       <ul class="country-count">
-          <li *ngFor="let country of objectKeys(countryCount).slice(1)">
+          <li *ngFor="let country of objectKeys(countryCount).slice(1) | filter: countryText" >
               {{countryCount[country]}}
            </li>
       </ul>
-  </div>
+ 
 </div>
