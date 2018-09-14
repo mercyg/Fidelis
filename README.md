@@ -17,5 +17,5 @@ If you don't have angular cli install
 
 - npm i
 
-- ng serve
+- ng serve to run project locally.
 
