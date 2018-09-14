@@ -1,4 +1,4 @@
-export interface AlertCount extends Array<AlertCount> {
+export interface AlertCount{
     Low:  number; 
     Medium : number;
     High: number;
