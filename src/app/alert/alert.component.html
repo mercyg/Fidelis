@@ -1,0 +1,68 @@
+<div style="text-align:center">
+  Total Alert Count 
+  <p>filter</p>
+</div>
+<br>
+<div class="container">
+  <div class="card">
+    <div class="card-header">Severity</div>
+    <ul class="severity-alert">
+       <li *ngFor="let alert of uniqueSeverityData ">    
+         {{alert}}
+       </li> 
+    </ul>
+    <ul class="severity-count">
+        <li *ngFor="let count of objectKeys(alertCount).slice(1)">
+            {{alertCount[count]}}
+         </li>
+    </ul>
+  </div>
+</div>
+<br>
+<div class="container">
+  <div class="card">
+    <div class="card-header">Client IP </div>
+    <ul class='client'>
+      <li  *ngFor="let clientip of uniqueClientIp">
+        {{clientip}}
+      </li>
+    </ul>
+    <ul class="client-count">
+        <li *ngFor="let ipcount of objectKeys(clientIpCount).slice(1)">
+            {{clientIpCount[ipcount]}}
+         </li>
+    </ul>
+  </div>
+</div>
+<br>
+<div class="container">
+  <div class="card">
+    <div class="card-header">Protocol</div>
+    <ul class="protocol">
+        <li *ngFor="let protocol of uniqueprotocol">
+          {{protocol}}
+        </li>
+      </ul>
+      <ul class="protocol-count">
+          <li *ngFor="let protocolC of objectKeys(protocolCount).slice(1)">
+              {{protocolCount[protocolC]}}
+           </li>
+      </ul>
+  </div>
+</div>
+<br>
+<div class="container">
+  <div class="card">
+    <div class="card-header">Client Country</div>
+    <ul class="country">
+        <li *ngFor="let country of uniqueCountry">
+          {{country}}
+        </li>
+      </ul>
+      <ul class="country-count">
+          <li *ngFor="let country of objectKeys(countryCount).slice(1)">
+              {{countryCount[country]}}
+           </li>
+      </ul>
+  </div>
+</div>
